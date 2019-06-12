@@ -14,8 +14,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.HttpClientErrorException;
 
-import com.jmlmdev.model.User;
 import com.jmlmdev.springbootsimpleapp.SpringBootSimpleAppApplication;
+import com.jmlmdev.springbootsimpleapp.model.User;
 
 import org.junit.Assert;
 

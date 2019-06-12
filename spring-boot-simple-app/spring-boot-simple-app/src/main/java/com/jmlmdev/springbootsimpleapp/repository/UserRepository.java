@@ -1,9 +1,9 @@
-package repository;
+package com.jmlmdev.springbootsimpleapp.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.jmlmdev.model.User;
+import com.jmlmdev.springbootsimpleapp.model.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {}

@@ -1,6 +1,7 @@
-package controller;
+package com.jmlmdev.springbootsimpleapp.controller;
 
 import java.util.Date;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,9 +23,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.ResourceAccessException;
 
-import com.jmlmdev.model.User;
-
-import repository.UserRepository;
+import com.jmlmdev.springbootsimpleapp.model.User;
+import com.jmlmdev.springbootsimpleapp.repository.UserRepository;
 
 @RestController
 @RequestMapping("/api/v1")
@@ -66,6 +66,9 @@ public class UserController {
 	 */
 	@PostMapping("/users")
 	public User createUser(@Valid @RequestBody User user) {
+		
+		user.setCreatedAt(new Date());
+		user.setCreatedBy("JMLM");
 		return userRepository.save(user);
 	}
 

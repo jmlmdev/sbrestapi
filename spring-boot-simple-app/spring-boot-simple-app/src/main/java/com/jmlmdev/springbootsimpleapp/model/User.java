@@ -1,4 +1,4 @@
-package com.jmlmdev.model;
+package com.jmlmdev.springbootsimpleapp.model;
 
 import java.util.Date;
 
@@ -35,10 +35,10 @@ public class User {
     @Column(name = "created_by", nullable = false)
     @CreatedBy
     private String createdBy;
-    @Column(name = "updated_at", nullable = false)
+    @Column(name = "updated_at", nullable = true)
     @LastModifiedDate
     private Date updatedAt;
-    @Column(name = "updated_by", nullable = false)
+    @Column(name = "updated_by", nullable = true)
     @LastModifiedBy
     private String updatedBy;
   /**
